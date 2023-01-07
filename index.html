@@ -17,22 +17,30 @@
       margin: 0 auto;
     }
 
-.header {
-  background: linear-gradient(to right, #7b4397, #dc2430);
-}
+    .trailer {
+    text-align: center;
+   }
+
+    .header {
+     background: linear-gradient(to right, #7b4397, #dc2430);
+   }
 
 
 
     header {
       background-color: #333;
       color: #fff;
-      padding: 20px;
+      padding:  20px;
       text-align: center;
     }
 
     header h1 {
-      margin: 0;
-    }
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+  }
 
     nav {
       display: flex;
@@ -62,8 +70,44 @@
     }
 
     main {
-      padding: 20px;
-    }
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  /* Add some layout and spacing to the page */
+  .game-details {
+    display: none;
+  }
+
+  .game-screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .game-screenshots img {
+    width: 45%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
 
     .featured-image {
       width: 100%;
@@ -168,7 +212,7 @@ width: 90%;
   </div>
   <ul>
     <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="#about" id="about-nav">About</a></li>
     <li><a href="#">Media</a></li>
     <li><a href="#">Contact</a></li>
   </ul>
@@ -198,6 +242,34 @@ width: 90%;
     </div>
   </div>
 </main>
+
+<main>
+  <section id="about-elden-ring">
+  <h2>About Elden Ring</h2>
+  <p>Elden Ring is a role-playing video game developed by FromSoftware, Inc. and published by Bandai Namco Entertainment. It was released for the PlayStation 4 and Xbox One in 2021, and for Microsoft Windows in 2022.</p>
+  <p>Elden Ring is set in a world filled with magic, knights, and dragons, and follows the story of a young hero who embarks on a quest to restore the shattered Elden Ring and bring peace to the kingdom.</p>
+  <button id="show-details-button">Show more details</button>
+  <div class="game-details">
+    <p>Elden Ring features a deep and immersive story, challenging gameplay, and stunning graphics. The game world is filled with secrets to discover and enemies to defeat, and players can customize their character with a variety of skills and abilities.</p>
+    <p>Elden Ring has received critical acclaim for its innovative gameplay and immersive world, and has won numerous awards since its release.</p>
+  </section>
+  </div>
+  <h3>Screenshots</h3>
+  <div class="game-screenshots">
+    <img src="screenshot-1.jpg" alt="Screenshot 1">
+    <img src="screenshot-2.jpg" alt="Screenshot 2">
+    <img src="screenshot-3.jpg" alt="Screenshot 3">
+    <img src="screenshot-4.jpg" alt="Screenshot 4">
+  </div>
+  <div class="trailer">
+  <h3>Trailer</h3>
+  <video poster="thumbnailvideo.jpg" width="640" height="360" controls>
+  <source src="https://example.com/my-video.mp4" type="video/mp4">
+  <p>Your browser does not support the video element.</p>
+  </div>
+</video>
+</main>
+
 <footer>
   <p>Copyright &copy; 2022 Elden Ring. All rights reserved.</p>
 </footer>
@@ -205,6 +277,32 @@ width: 90%;
 </html>
 
 
+<script>
+// Add a click event listener for the About navigation menu item
+const aboutNavItem = document.querySelector('#about-nav');
+const aboutEldenRingSection = document.querySelector('#about-elden-ring');
+
+aboutNavItem.addEventListener('click', (event) => {
+  // scroll to the aboutEldenRingSection element
+  aboutEldenRingSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+</script>
+
+<script>
+  // Add some interactivity to the page
+  const showDetailsButton = document.querySelector('#show-details-button');
+  const gameDetails = document.querySelector('.game-details');
+  showDetailsButton.addEventListener('click', () => {
+    if (gameDetails.style.display === 'none') {
+      gameDetails.style.display = 'block';
+      showDetailsButton.textContent = 'Hide details';
+    } else {
+      gameDetails.style.display = 'none';
+      showDetailsButton.textContent = 'Show more details';
+    }
+  });
+</script>
 
 <script>
   // Get the navbar element
