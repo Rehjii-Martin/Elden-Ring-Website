@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elden Ring</title>
+  <style>
+    /* Add some style to the website */
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+.header {
+  background: linear-gradient(to right, #7b4397, #dc2430);
+}
+
+
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .featured-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,2)
+    }
+
+
+.container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.card {
+width: 30%;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+  /* Add style rules for screens smaller than 480px */
+}
+
+.card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+object-position: center;
+border-radius: 5px 5px 0 0;
+}
+
+.card h2 {
+margin: 20px;
+font-size: 24px;
+}
+
+.card p {
+margin: 0 20px 20px;
+font-size: 16px;
+line-height: 1.5;
+}
+
+footer {
+background-color: #333;
+color: #fff;
+padding: 20px;
+text-align: center;
+}
+
+footer p {
+margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+nav ul {
+flex-direction: column;
+}
+
+.container {
+width: 90%;
+}
+
+.card {
+width: 45%;
+}
+}
+
+@media screen and (max-width: 480px) {
+.container {
+width: 95%;
+}
+
+.card {
+width: 90%;
+}
+
+
+}
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Elden Ring</h1>
+    </header>
+
+<nav>
+  <div class="logo">
+    <img src="elden-ring-logo.jpg" alt="Elden Ring logo" width="60" height="60">
+  </div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Media</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <img class="featured-image" src="eldenringscreenshot.jpg" alt="Screenshot of Elden Ring">
+  <h2>Welcome to the official website for Elden Ring</h2>
+  <p>Elden Ring is an action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment. The game is set in a world of decaying deities and their descendants, who seek to reclaim their former power. Players take control of a custom character and progress through the game by exploring environments, defeating enemies, and leveling up their character.</p>
+
+  <div class="container">
+    <div class="card">
+      <img src="character.jpg" alt="Character from Elden Ring">
+      <h2>Create Your Own Character</h2>
+      <p>In Elden Ring, players can create their own character and choose their appearance, starting stats, and starting class. As the player progresses through the game, they can level up their character and allocate skill points to unlock new abilities and passive effects.</p>
+    </div>
+    <div class="card">
+
+<img src="world.jpg" alt="World of Elden Ring">
+      <h2>Explore the World of Elden Ring</h2>
+      <p>The world of Elden Ring is filled with mysterious and dangerous locations to explore. From ancient ruins to dark forests, each area is filled with secrets and challenges for players to uncover. As players explore the world, they will encounter various enemies and bosses, each with their own unique abilities and tactics.</p>
+    </div>
+    <div class="card">
+      <img src="combat.jpg" alt="Combat in Elden Ring">
+      <h2>Experience Intense Combat</h2>
+      <p>Elden Ring features fast-paced combat that requires players to constantly adapt to new situations. Players can choose from a variety of weapons and spells, each with their own unique playstyle. The game also features a stamina system that limits the player's actions, adding a layer of strategy to the combat.</p>
+    </div>
+  </div>
+</main>
+<footer>
+  <p>Copyright &copy; 2022 Elden Ring. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+
+
+<script>
+  // Get the navbar element
+  var navbar = document.querySelector("nav");
+
+  // Get the offset position of the navbar
+  var sticky = navbar.offsetTop;
+
+  // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function makeSticky() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+
+  // When the user scrolls the page, execute makeSticky
+  window.onscroll = function() {makeSticky()};
+</script>
