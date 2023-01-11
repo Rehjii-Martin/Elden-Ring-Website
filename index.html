@@ -377,7 +377,7 @@ width: 90%;
 <script>
 
 // Get form element
-const form = document.getElementByName('form2');
+const form = document.getElementsByName('form2')[0];
 
 // Get input elements
 const usernameInput = document.getElementById('username');
@@ -400,26 +400,6 @@ form.addEventListener('submit', (e) => {
 });
 
 </script>
-
-<script>
-
-// Select the form element
-const form = document.querySelector('#chatbot-form');
-
-// Handle form submission
-form.addEventListener('submit', (event) => {
-  // Prevent default form submission behavior
-  event.preventDefault();
-
-  // Get the value of the "hours-played" input field
-  const hoursPlayed = form.elements['hours-played'].value;
-
-  // Display the value to the user
-  alert(`You have played Elden Ring for ${hoursPlayed} hours!`);
-});
-
-</script>
-
 
 
 <script> 
